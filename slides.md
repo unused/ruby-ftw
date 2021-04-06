@@ -367,9 +367,7 @@ should end up being able to recreate this statement.
 
 # Timeless Project
 
-<!--
-NOTE: build some code
--->
+<!-- NOTE: build some code -->
 
 # A Word of Warning
 

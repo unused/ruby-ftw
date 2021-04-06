@@ -10,9 +10,15 @@ presentation: slides.pdf
 %.pdf: %.md
 	@pandoc $(PANDOC_OPTS) -o $@ $<
 
+.PHONY: backup
+backup: slides-backup.pdf
+
+slides-backup.md:
+	@ruby slides-backup.rb
+
 .PHONY: clean
 clean:
-	@rm -f slides.pdf
+	@rm -f slides.pdf slides-backup.pdf slides-backup.md
 
 .PHONY: watch
 watch:
