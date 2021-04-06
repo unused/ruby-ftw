@@ -3,7 +3,7 @@ title: ruby FTW / Linuxtage 2021
 author: Christoph Lipautz
 theme: Copenhagen
 colortheme: beaver
-date: March 17, 2021
+date: April 05, 2021
 ---
 
 <!--
@@ -16,28 +16,39 @@ Programming Languages are (kind of) Tools
 
 <!--
 From certain point of view programming languages have lot of similarities to
-choosing tools for a job. So lets say programming languages are kind of tools.
+choosing a tool for a certain job. So lets say programming languages are kind
+of tools.
 
-They have in common that they were created to solve a certain problem in a
-different, mostly more simple or elegant way.
+They have in common that they are created to solve some problem in a different,
+mostly more simple or elegant way than other tools do.
+-->
 
-Therefor we might say that the more tools you know, the better you will know if
-you could save some time, effort or sanity.
+# Tool FTW\footnote{https://unsplash.com/photos/NL\_DF0Klepc}
+
+![](./media/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg)
+
+<!--
+Therefor we might say that: The more tools you know, the better you know if
+you could save some time, effort or sanity using something else.
 -->
 
 # Learn a Programming Language Every Year
 
-Do not strictly compare, but try to understand its purpose.
+Do not strictly compare things to what you know, but try to understand its
+purpose.
 
 <!--
-There is a good practice that ensure us we keep up studying. It is to learn
-a new programming language every year.
+There is a good practice that ensures we keep up studying. It states that we
+should learn at least one new programming language every year.
 
-If you learn at least one programming language a year it will enrich your
-perspective on different problems and help you figure out better solutions.
+If you study new concepts from time to time it will not just enrich your
+toolset...
+...It will also change your perspective on different problems.
+...And it will help you figure out better solutions.
 
-Suppose you lean a new language, do not compare to what you currently are aware
-of but try to figure out what the inventors of this tool were trying to solve.
+Suppose you learn a new language, then do not compare to what you currently are
+aware of.
+...Try to figure out what the inventors of this tool were trying to solve.
 -->
 
 # Christoph Lipautz
@@ -45,15 +56,21 @@ of but try to figure out what the inventors of this tool were trying to solve.
 ![](./media/me.jpg)
 
 <!--
-I'm Christoph and I spent a lot of time building software. On a daily basis I
-do this using go, sometimes python, javascript or and some other tools.
+I'm Christoph and I spent a lot of time building software.
+For the last decade I tried to study at least one new programming language
+every year.
+Now I use go, sometimes python, javascript and some other tools on a daily
+basis.
+However I'm especially grateful that I can spent a lot of time using Ruby.
 
-I'm especially grateful that I can spent a lot of time using ruby.
+In this talk I want to share with you some of my thoughts of Ruby.
+As I think the best way to get to know something is to see it in action I will
+do some live coding rather than going through all of the good and bad parts
+of the language.
 
-In this talk I want to give you some insights on why I love to work with ruby.
-
-As this is a live (remote) presentation, feel free to interrupt me anytime
-to ask a question. Or at least save them for the Q/A session afterwards.
+As this is a live (remote) presentation, feel free to ask questions any time
+in the chat.
+...Or write them down for the Q/A session after the talk.
 -->
 
 # Overview of this Talk
@@ -69,22 +86,23 @@ to ask a question. Or at least save them for the Q/A session afterwards.
 - Question and Answer Session
 
 <!--
-I picked up ruby for the first time somewhere around 13-15 years ago and it
-resisted to be the tool of choice. For the first part of this talk I want
-to give some background on the language, following with a very brief
-introduction.
+I picked up Ruby for the first time somewhere around 13-15 years ago and it
+resisted to be the tool of choice for me.
+For the first part of this talk I want to give some background on the language,
+following with a very very brief introduction.
 
-Then we'll have a look on a code example and play with time.
+Then we'll have a look on a code example, build a small package from scratch
+and play with time.
 
 After that I share some selected resources, point you to proper help
-to get started, and do more coding if there is time left.
+to get started, and do more coding if there is some time left.
 
-In the final part there is extra time reserved for a Q and A session.
+In the final part there is some extra time reserved for a Q and A session.
 
 Lets get started.
 -->
 
-# Ruby\footnote{https://www.ruby-lang.org/}
+# Ruby - Interpreted, Object Oriented\footnote{https://www.ruby-lang.org/}
 
 ![](./media/ruby-logo.png) Designed for Developer Happiness
 
@@ -120,9 +138,11 @@ Pretty easy to guess what the code snippet does, right?
 ```
 
 <!--
-I could have also ask what "seven times print hello world" will do ^^
+I could have also just read out the statement:
+  "seven times print hello world"
+and ask you what do you think it will result to ^^
 
-This Ruby code style can be attributed to the inventor and chief designer of
+This style of code can be attributed to the inventor and chief designer of
 the language.
 -->
 
@@ -142,60 +162,73 @@ And it seems he is also responsible for the very nice community of Ruby.
 Matz is nice, so we are nice.
 
 <!--
-A widely known statement in the Ruby community is Matz is nice, so we are nice.
-
-So what can you expect from Ruby?
+A widely known statement in the Ruby community is: Matz is nice, so we are
+nice. And Rubyists tend to follow this mantra.
 -->
 
 # What can you expect from Ruby?
 
 - A Welcoming Community
 
-- Conventions, Best Practice, No Strict Rules
-
 - A Well Aged Environment
 
+- Conventions, Best Practice, No Strict Rules
+
+
 <!--
-In my very personal view:
+So what can you expect from Ruby?
 
 A very nice community, that is helpful, and welcomes you at any point.
+...And I think I don't have to explain how valuable it is that you have
+a community that loves to share code, knowledge and tends to be extra nice
+to each other.
 
-No rules to follow but good examples and best practices. Also ruby code that
-feels familiar when writing or reading because of conventions you learn.
+Due to its quite long history you can also expect a large, stable and battle
+tested environment.
 
-Due to its quite long history you can expect a large, stable and battle tested
-environment.
+And there are no rules to follow but good examples and best practices.
+After some time coding Ruby, the conventions given will just feel right.
+Several times I've come up with almost the very same code to problems that I
+later found written by someone else.
+It is impressive to see how you learn to think in certain ways, without being
+forced in a specific direction.
 -->
 
 # Conventions
 
-Expect conventions and best practice, but no strict rules.
+Expect conventions and best practice, but no strict rules?
 
 <!--
-Let's have a closer look to what I mean with mentioning conventions.
+Let's have a closer look to what I mean with conventions.
 -->
 
 # Conventions?
 
 ```ruby
-a = [1, 2, 3]
-a.member? 2 # true
-
 # as convention: expect methods ending with ? to
 # respond with a boolean
 user.active?
+
+a = [1, 2, 3]
+a.member? 2 # true
 ```
 <!--
-Ruby allows you to use UTF-8 in the source, so you can e.g. define method names
-that end with a question sign.
+Ruby allows you to use UTF-8 in the source, so you can, as ... in the example,
+define method names that end with a question sign.
 
 Any time you see such a method, you can for sure expect that it will return
-either some value that evaluates to true or false.
+some value that evaluates either to true or false.
+
+The code snippet has a variable user and active, suffixed with a question mark,
+is send to it. It is likely that you will expect true or false reading this
+line.
+Same goes to the Array assigned to a below. The message clearly checks if two
+is a member of that array.
 
 This is no feature of the language, but the way the community sorted out would
 be a good style.
-
-NOTE: explain source code example
+No one tells you to do it that way, but now that you now it will be likely you
+will write methods like that as well.
 -->
 
 # Conventions!
@@ -215,7 +248,11 @@ As another example if a method ends with an exclamation mark, it will do
 something destructive like changing the internals of an object or raising
 an exception if arguments or internals that are provided are not as expected.
 
-NOTE: explain source code example
+The array one, two, two responds with a new array one, two when uniq is sent.
+Using the destructive method will not create a new array but change the
+existing one.
+It changes some internals and this might not be expected, therefor it notifies
+the reader with the exclamation mark.
 -->
 
 # Everything is a file
@@ -223,6 +260,9 @@ NOTE: explain source code example
 Everything in Unix is a file
 
 <!--
+Before we start with the brief basics, I need to share a very important
+feature of the language.
+
 From Unix-like systems we go by the convention that everything is a file.
 -->
 
@@ -249,42 +289,54 @@ Lets write some code:
 
 interactive ruby irb...
 
+1 # responds with the result of the last statement
 1 + 1 # ruby has scalar types, like integers
 1.0 + 1.0 # floats
-"foobar" # for sure also strings
-:foobar # and to optimize memory using strings in code, it provides symbols
-# don't mind any details on symbols, we won't need them
+"foobar" # for sure also strings in double or single quotes
+# and to optimize memory, it provides symbols as alternatives to string in your
+# code.
+:foobar
+# don't mind any further details on symbols - just remember like strings
 x = [1, "foo", "bar", 2] # other important types are arrays
 x[2] # bar
 x = { one: 1, two: 2, foo: 'bar' } # and hashes
 x[:foo] # bar
-# we define a class like this
+# define methods like this
+def foo
+  return 'bar'
+end
+foo()
+foo # and can also skip the braces.
+# this is something that comes with Ruby: you can often write things in
+# different form that will do the same thing. This is necessary when as we
+# want to improve readability.
+
+# we define a class like this:
 class A
   def foo
-    "first"
-    "last"
+    # here we omit the return statement, a method will always return something
+    # and if not explicitly stated, it will use the last line of code
+    "bar"
   end
 end
 a = A.new
 
 # calling method foo of object instance stored in a we tend to say: sending
 # message :foo to the instance.
-a.foo # last ... last line is returned, no explicit return required
-
-# for sure we could also use an explicit return state but we tend to skip
-# things that are not necessary to improve readability.
-# same goes for braces, not all are required
-a.foo()
+a.foo # last ... bar is returned, no explicit return required
 
 # Note that this allows you to choose what you like best, but most Rubyists
 # tend to same or similar styles over time. For sure you can also use static
 # code analyzer that will help you figure out style rule violations, and inform
 # about best practice.
+
 # as everything is an object, we can send messages to primitives
 1.zero?
 
-# ... we could even check for the methods available for an object at hand.
+# ... and we could even check for the methods available for an object at hand.
 1.public_methods
+
+# call some of the public methods, like odd? or even?
 -->
 
 # Ruby on Rails in Action
@@ -294,11 +346,19 @@ users = User.where :created_at.gte => 3.days.ago
 ```
 
 <!--
-When I started with Ruby, one of the very first things that blew my mind
-was the way you can deal with Time. This line of code is extracted from a
-project that is using the popular web framework Ruby on Rails.
-As time handling was such pain to do for me before I was really exited to see
-such an easy approach.
+Enough for the basics, let's have a look on the following line.
+
+This line of code is extracted from a project that is using the popular web
+framework Ruby on Rails.
+
+When I started working with Ruby, one of the very first things that blew my
+mind was the way you can deal with Time.
+As time handling was such pain to do for me before
+...I was really exited to see such an easy approach.
+
+The line uses some database abstraction and queries alls users that were
+created greater than equal three days ago...
+or in the other way: all users created in the last 3 days
 
 For this presentation I decided to build a package that offers this
 functionality from scratch. For sure in a very simplified version, but we
@@ -316,17 +376,20 @@ NOTE: build some code
 Don't mess with primitives.
 
 <!--
-The code written was build for demonstration purpose but it might be a bad
-idea to start dealing with Ruby and starting by manipulating its very
-basic objects.
+The code written was build for demonstration purpose.
+If you want to start with Ruby, it might be a bad idea that the first thing you
+do is manipulating its very basic objects.
+
+For this presentation however I think it was a good fit :)
 -->
 
 # Resources
 
-Where should I start?
+Where should I go now?
 
 <!--
-To get started with Ruby I'd recommend four sites.
+If you want to give Ruby a try, or already have and want to take a closer look
+now, I want to share four sites with you.
 -->
 
 # Try Ruby\footnote{https://try.ruby-lang.org/}
@@ -334,20 +397,21 @@ To get started with Ruby I'd recommend four sites.
 ![](./media/try-ruby.png)
 
 <!--
-Visit try ruby to have an interactive playground and get a guided tour of
-the basics.
+The first one is try ruby on the official site of the language that gives you
+a guided tour and a nice playground in your web browser.
 -->
 
-# Join Exercism\footnote{https://try.ruby-lang.org/}
+# Join Exercism\footnote{https://exercism.io/tracks/ruby}
 
 ![](./media/exercism.png)
 
 <!--
-Have a look at Exercism, which is a open source platform that supports you when
-learning a programming language. It currently has around 50 language tracks,
-where you solve tasks and get feedback of real people. Note that those people
-are volunteers, so don't be mad if it takes some time to get some review of
-your solution.
+Second, have a look at Exercism, which is a open source platform that supports
+you when learning a programming language.
+It currently has around 50 language tracks, where you solve tasks and get
+feedback of real people.
+Note that those people are volunteers, so don't be mad if it takes some time to
+get reviews of your solution.
 
 I follow this project since 2013 and also contribute as mentor for several
 language tracks. Chances are good that you receive some code review from me on
@@ -362,6 +426,9 @@ your solution written in Ruby.
 If you are into web development you should definitely browse through the guides
 of the Ruby on Rails framework which is the basis of websites like GitHub,
 GitLab and Shopify.
+
+It is a collection of many packages that provides so much awesome Ruby code and
+it also offers great ways to build web applications.
 -->
 
 # Run RuboCop\footnote{https://rubocop.org/}
@@ -369,10 +436,12 @@ GitLab and Shopify.
 ![](./media/rubocop.png)
 
 <!--
-When you've spent some time with ruby, it's time to meet its widely used static
-code analyzer RuboCop. This tool will help you to use and understand best
-practices from the Ruby community. For me it took quite some time to stop
-hating this tool and get the value behind, so don't give up easily.
+When you've spent some time with Ruby, it is time to meet its widely used
+static code analyzer RuboCop.
+This tool will help you to use and understand best practices from the Ruby
+community.
+For me it took quite some time to stop hating this tool and get the value
+behind, so don't give up easily.
 -->
 
 # Slides, Code, Contact - Thanks a lot for Joining!!!
@@ -394,7 +463,9 @@ linuxtage IRC channel at OFTC. You can also find me on GitHub as unused. This
 presentation and all code can be found there as well.
 
 If you want to contact me after the event you'll probably find some email
-address, but the easiest way is using Twitter.
+address when duckduckgo'ing my name.
 
-Thank you for joining!
+But the easiest way is to write me on Twitter.
+
+Thank you for joining, looking forward to your questions!
 -->

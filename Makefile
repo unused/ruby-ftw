@@ -1,4 +1,4 @@
-PANDOC_OPTS=-t beamer
+PANDOC_OPTS=-t beamer -H templates/slides-header.tex
 
 # .PHONY: rabbit
 # rabbit:
