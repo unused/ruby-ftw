@@ -1,6 +1,8 @@
 require_relative './timeless'
-require 'mongoid'
-require 'faker'
+
+require 'mongoid' # MongoDB database abstraction
+require 'faker' # Fake Data Generators
+require 'pry' # Debugger
 
 Mongoid.configure do |config|
   config.clients.default = {
@@ -31,4 +33,4 @@ print "\n"
 # User.limit(5).pluck(:name, :joined_at) ... [[...]]
 # User.where(:joined_at.gte => 1.day.ago).pluck(:name, :joined_at) ... [[...]]
 # User.where(:joined_at.gte => 1.day.ago).order_by(joined_at: :desc).pluck(:joined_at) ... [[...]]
-require 'pry'; binding.pry
+binding.pry # start debugging session

@@ -8,11 +8,21 @@ mkdir timeless
 cd timeless
 git init
 vim README.md # Edit Project Title, Description, Usage and Setup
+cat README.md
+  # Timeless
+  A time handling package to showcase the beauty of [Ruby](https://www.ruby-lang.org).
+  ## Usage
+  require 'timeless'
+  print (5.days + 5.hours + 5.mintes).from_now # Time<2021...
+  ## Development
+  $ bundle install # install dependencies
+  $ bundle exec ruby tests/ # run testsuite
+  $ bundle exec irb -r './timeless'
+
 # Ruby packages are called gems or rubygems. There is a nice packagemanager
 # named gem that ships with ruby.
-gem install --help
+gem install --help | head
 # gem install bundler
-# NOTE on container via podman
 gem info bundler
 bundle init # initialize package handler
 vim Gemfile
@@ -53,7 +63,7 @@ vim timeless.rb
       end
 
       def self.days(i)
-        i * 24 * 60 * 60
+        new i * 24 * 60 * 60
       end
 
       def ==(other)
@@ -106,8 +116,10 @@ class TestTimelessDuration < Minitest::Test
 end
 
 # timeless.rb
-# ...
+#  - Add weeks to Integer and Duration (like days)
+#  - Extend Duration
 class Duration
+  # ...
   def ago
     Time.at(Time.now.to_i - @seconds).utc
   end
