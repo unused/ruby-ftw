@@ -3,7 +3,7 @@ title: ruby FTW / Linuxtage 2021
 author: Christoph Lipautz
 theme: Copenhagen
 colortheme: beaver
-date: April 05, 2021
+date: April 10, 2021
 ---
 
 <!--
@@ -23,7 +23,7 @@ They have in common that they are created to solve some problem in a different,
 mostly more simple or elegant way than other tools do.
 -->
 
-# Tool FTW\footnote{https://unsplash.com/photos/NL\_DF0Klepc}
+# Tools FTW\footnote{https://unsplash.com/photos/NL\_DF0Klepc}
 
 ![](./media/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg)
 
