@@ -32,10 +32,9 @@ Therefor we might say that: The more tools you know, the better you know if
 you could save some time, effort or sanity using something else.
 -->
 
-# Learn a Programming Language Every Year
+# Learn a Programming Language Every Year\footnote{https://unsplash.com/photos/FwF\_fKj5tBo}
 
-Do not strictly compare things to what you know, but try to understand its
-purpose.
+![](./media/alice-dietrich-FwF_fKj5tBo-unsplash.jpg)
 
 <!--
 There is a good practice that ensures we keep up studying. It states that we
@@ -51,7 +50,7 @@ aware of.
 ...Try to figure out what the inventors of this tool were trying to solve.
 -->
 
-# Christoph Lipautz
+# Me Reading Stuff
 
 ![](./media/me.jpg)
 
@@ -63,10 +62,7 @@ Now I use go, sometimes python, javascript and some other tools on a daily
 basis.
 However I'm especially grateful that I can spent a lot of time using Ruby.
 
-In this talk I want to share with you some of my thoughts of Ruby.
-As I think the best way to get to know something is to see it in action I will
-do some live coding rather than going through all of the good and bad parts
-of the language.
+In this talk I want to share with you some of my thoughts on Ruby.
 
 As this is a live (remote) presentation, feel free to ask questions any time
 in the chat.
@@ -77,8 +73,6 @@ in the chat.
 
 - Why did I stick with Ruby for so many years?
 
-- Super Brief Basics (Code)
-
 - An Example dealing with Time (Code)
 
 - Resources, Getting Started, More Code(?)
@@ -87,15 +81,16 @@ in the chat.
 
 <!--
 I picked up Ruby for the first time somewhere around 13-15 years ago and it
-resisted to be the tool of choice for me.
-For the first part of this talk I want to give some background on the language,
-following with a very very brief introduction.
+resisted to be number one tool of choice for me.
 
-Then we'll have a look on a code example, build a small package from scratch
-and play with time.
+For the first part of this talk I start with some facets that I really like.
 
-After that I share some selected resources, point you to proper help
-to get started, and do more coding if there is some time left.
+As I think the best way to get to know something is to see it in action I will
+do live coding in the second part.
+
+After that I close with pointing to some selected resources.
+
+If there is some time left, we can go for more code.
 
 In the final part there is some extra time reserved for a Q and A session.
 
@@ -164,42 +159,26 @@ Matz is nice, so we are nice.
 <!--
 A widely known statement in the Ruby community is: Matz is nice, so we are
 nice. And Rubyists tend to follow this mantra.
+
+I think I don't have to explain how valuable it is that you have
+a community that loves to share code, knowledge and tends to be extra nice
+to each other. Rubyist are helpful and welcome you at any point.
 -->
 
-# What can you expect from Ruby?
+# Expect Conventions and Best Practice, but no Strict Rules?\footnote{https://unsplash.com/photos/cvQzH3npXT8}
 
-- A Welcoming Community
-
-- A Well Aged Environment
-
-- Conventions, Best Practice, No Strict Rules
-
+![](./media/kajetan-sumila-cvQzH3npXT8-unsplash.jpg)
 
 <!--
-So what can you expect from Ruby?
+There are not many rules to follow when coding in Ruby but a lot of good
+examples and best practices.
 
-A very nice community, that is helpful, and welcomes you at any point.
-...And I think I don't have to explain how valuable it is that you have
-a community that loves to share code, knowledge and tends to be extra nice
-to each other.
-
-Due to its quite long history you can also expect a large, stable and battle
-tested environment.
-
-And there are no rules to follow but good examples and best practices.
 After some time coding Ruby, the conventions given will just feel right.
-Several times I've come up with almost the very same code to problems that I
+
+Several times I've come up with almost the very same code to a problem that I
 later found written by someone else.
 It is impressive to see how you learn to think in certain ways, without being
 forced in a specific direction.
--->
-
-# Conventions
-
-Expect conventions and best practice, but no strict rules?
-
-<!--
-Let's have a closer look to what I mean with conventions.
 -->
 
 # Conventions?
@@ -213,22 +192,22 @@ a = [1, 2, 3]
 a.member? 2 # true
 ```
 <!--
+The code snippet has a variable user and active, suffixed with a question mark,
+is send to it. It is likely that you will expect true or false reading this
+line.
+Same goes to the Array assigned to variable a below. The message clearly checks
+if two is a member of that array.
+
 Ruby allows you to use UTF-8 in the source, so you can, as ... in the example,
 define method names that end with a question sign.
 
 Any time you see such a method, you can for sure expect that it will return
 some value that evaluates either to true or false.
 
-The code snippet has a variable user and active, suffixed with a question mark,
-is send to it. It is likely that you will expect true or false reading this
-line.
-Same goes to the Array assigned to a below. The message clearly checks if two
-is a member of that array.
-
 This is no feature of the language, but the way the community sorted out would
 be a good style.
-No one tells you to do it that way, but now that you now it will be likely you
-will write methods like that as well.
+No one tells you to do it that way, but now that you know, it will be likely
+you will write methods like that as well.
 -->
 
 # Conventions!
@@ -237,6 +216,7 @@ will write methods like that as well.
 a = [1, 2, 2]
 a.uniq # [1, 2]
 print a # [1, 2, 2]
+
 # as convention: expect methods with ! to do something
 # destructive (or dangerous)
 a.uniq! # [1, 2]
@@ -244,137 +224,80 @@ print a # [1, 2]
 ```
 
 <!--
-As another example if a method ends with an exclamation mark, it will do
-something destructive like changing the internals of an object or raising
-an exception if arguments or internals that are provided are not as expected.
-
 The array one, two, two responds with a new array one, two when uniq is sent.
+The original array in variable a is not changed.
+
 Using the destructive method will not create a new array but change the
 existing one.
 It changes some internals and this might not be expected, therefor it notifies
 the reader with the exclamation mark.
+
+If a method ends with an exclamation mark, it will do something destructive,
+like in this case, changing the internals of an object.
+In other cases it raises an error if arguments or internals that are provided
+are not as expected.
 -->
 
-# Everything is a file
+# Everything is a File
 
-Everything in Unix is a file
+Everything in Unix is a file.
 
 <!--
-Before we start with the brief basics, I need to share a very important
-feature of the language.
-
-From Unix-like systems we go by the convention that everything is a file.
+A nice correlation is that where everything in Unix is a file.
 -->
 
-# Everything is a object
+# Everything is a Object
 
-Everything in Ruby is a object
+Everything in Ruby is a object.
 
 <!--
-In Ruby everything is a
+Everything in Ruby is a
 -->
 
-# Everything is an object
+# Everything is an Object
 
-Everything in Ruby is an object
+Everything in Ruby is an object.
 
 <!--
-...everything is an object
+...is an object
 -->
 
-# Lets GO ^^
-
-<!--
-Lets write some code:
-
-interactive ruby irb...
-
-1 # responds with the result of the last statement
-1 + 1 # ruby has scalar types, like integers
-1.0 + 1.0 # floats
-"foobar" # for sure also strings in double or single quotes
-# and to optimize memory, it provides symbols as alternatives to string in your
-# code.
-:foobar
-# don't mind any further details on symbols - just remember like strings
-x = [1, "foo", "bar", 2] # other important types are arrays
-x[2] # bar
-x = { one: 1, two: 2, foo: 'bar' } # and hashes
-x[:foo] # bar
-# define methods like this
-def foo
-  return 'bar'
-end
-foo()
-foo # and can also skip the braces.
-# this is something that comes with Ruby: you can often write things in
-# different form that will do the same thing. This is necessary when as we
-# want to improve readability.
-
-# we define a class like this:
-class A
-  def foo
-    # here we omit the return statement, a method will always return something
-    # and if not explicitly stated, it will use the last line of code
-    "bar"
-  end
-end
-a = A.new
-
-# calling method foo of object instance stored in a we tend to say: sending
-# message :foo to the instance.
-a.foo # last ... bar is returned, no explicit return required
-
-# Note that this allows you to choose what you like best, but most Rubyists
-# tend to same or similar styles over time. For sure you can also use static
-# code analyzer that will help you figure out style rule violations, and inform
-# about best practice.
-
-# as everything is an object, we can send messages to primitives
-1.zero?
-
-# ... and we could even check for the methods available for an object at hand.
-1.public_methods
-
-# call some of the public methods, like odd? or even?
--->
-
-# Ruby on Rails in Action
+# Ruby in Action
 
 ```ruby
 users = User.where :created_at.gte => 3.days.ago
 ```
 
 <!--
-Enough for the basics, let's have a look on the following line.
-
 This line of code is extracted from a project that is using the popular web
 framework Ruby on Rails.
 
 When I started working with Ruby, one of the very first things that blew my
 mind was the way you can deal with Time.
-As time handling was such pain to do for me before
-...I was really exited to see such an easy approach.
 
-The line uses some database abstraction and queries alls users that were
-created greater than equal three days ago...
-or in the other way: all users created in the last 3 days
+As time handling was such pain to me using other tools
+...I was really exited to see such an easy and elegant approach.
 
-For this presentation I decided to build a package that offers this
-functionality from scratch. For sure in a very simplified version, but we
-should end up being able to recreate this statement.
+The snippet uses some database abstraction and queries alls users that were
+created in the last three days...
+...or in the other way: users where created at is greater than equal 3 days ago
+
+For this presentation I decided to build a package that offers this time
+handling from scratch. For sure in a very simplified version, but we should end
+up being able to recreate this statement.
 -->
 
 # Timeless Project
 
 <!-- NOTE: build some code -->
 
-# A Word of Warning
+# A Word of Warning: Don't mess with primitives!\footnote{https://unsplash.com/photos/QeYLUolK1XY}
 
-Don't mess with primitives.
+![](./media/felix-hoffmann-QeYLUolK1XY-unsplash.jpg)
 
 <!--
 The code written was build for demonstration purpose.
+
 If you want to start with Ruby, it might be a bad idea that the first thing you
 do is manipulating its very basic objects.
 
@@ -386,8 +309,18 @@ For this presentation however I think it was a good fit :)
 Where should I go now?
 
 <!--
-If you want to give Ruby a try, or already have and want to take a closer look
-now, I want to share four sites with you.
+If you liked the short demonstration and you want to see more Ruby Code, let
+me point you to some proper resources.
+-->
+
+# This Presentation at GitHub\footnote{https://github.com/unused/ruby-ftw}
+
+![](./media/github-repo.png)
+
+<!--
+All codes - even more than shown - is published at GitHub. Currently there
+are only 10 repositories showing up when you search for ruby ef te double-u
+on GitHub, I am sure you will find it quickly.
 -->
 
 # Try Ruby\footnote{https://try.ruby-lang.org/}
@@ -452,18 +385,16 @@ Christoph Lipautz
 
 - [\@lipdaguit](https://twitter.com/lipdaguit) on Twitter
 
-Find Presentation Slides and Code at:
-  [https://github.com/unused/ruby-ftw](https://github.com/unused/ruby-ftw)
+- [https://github.com/unused/ruby-ftw](https://github.com/unused/ruby-ftw)
 
 <!--
 I'm Christoph and use unused as nickname in the
-linuxtage IRC channel at OFTC. You can also find me on GitHub as unused. This
-presentation and all code can be found there as well.
+linuxtage IRC channel at OFTC. You can find me on GitHub as unused.
 
-If you want to contact me after the event you'll probably find some email
+If you want to contact me after the event you will probably find some email
 address when duckduckgo'ing my name.
-
 But the easiest way is to write me on Twitter.
 
-Thank you for joining, looking forward to your questions!
+A big thank you for the Linuxtage Team for organizing this event.
+And many thanks to you for joining my talk. Looking forward to your questions!
 -->
