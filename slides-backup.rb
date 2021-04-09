@@ -1,4 +1,7 @@
-
+# As live-coding might fail due to technical issues while screensharing,
+# the following snippets takes the screenshots from ./coding-backup and
+# creates a slide for each, resulting in a combined documents slides-backup.md
+# that can be used to generate backup slides.
 lines = File.readlines './slides.md'
 
 insert_at = lines.find_index { |line| line.include? 'NOTE: build some code' }

@@ -9,6 +9,10 @@ introduction, discusses the language very goals and shows some nice examples.
 
 ## Usage
 
+Slides (PDF) are generated using [pandoc](https://pandoc.org/). A extended
+[coding-example](coding-example/) contains code presented with verbose
+comments and additional features.
+
 ```
 $ make # generate slides
 ```

@@ -19,8 +19,8 @@ From certain point of view programming languages have lot of similarities to
 choosing a tool for a certain job. So lets say programming languages are kind
 of tools.
 
-They have in common that they are created to solve some problem in a different,
-mostly more simple or elegant way than other tools do.
+With tools, they have in common that they are created to solve some problem in
+a different, mostly more simple or elegant way than other tools do.
 -->
 
 # Tools FTW\footnote{https://unsplash.com/photos/NL\_DF0Klepc}
@@ -28,8 +28,8 @@ mostly more simple or elegant way than other tools do.
 ![](./media/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg)
 
 <!--
-Therefor we might say that: The more tools you know, the better you know if
-you could save some time, effort or sanity using something else.
+Therefor we might also say that: The more tools you know, the better you know
+if you could save some time, effort or sanity using something else.
 -->
 
 # Learn a Programming Language Every Year\footnote{https://unsplash.com/photos/FwF\_fKj5tBo}
@@ -63,10 +63,6 @@ basis.
 However I'm especially grateful that I can spent a lot of time using Ruby.
 
 In this talk I want to share with you some of my thoughts on Ruby.
-
-As this is a live (remote) presentation, feel free to ask questions any time
-in the chat.
-...Or write them down for the Q/A session after the talk.
 -->
 
 # Overview of this Talk
@@ -85,8 +81,8 @@ resisted to be number one tool of choice for me.
 
 For the first part of this talk I start with some facets that I really like.
 
-As I think the best way to get to know something is to see it in action I will
-do live coding in the second part.
+As I think the best way to get to know something is to see it in action.
+I will do live coding in the second part.
 
 After that I close with pointing to some selected resources.
 
@@ -102,7 +98,7 @@ Lets get started.
 ![](./media/ruby-logo.png) Designed for Developer Happiness
 
 <!--
-Ruby is an object oriented and interpreted programming language that is know to
+Ruby is an interpreted, object oriented programming language that is known to
 focus on developer happiness.
 
 Any ruby software creators profit from code that is easy to write.
@@ -227,7 +223,7 @@ print a # [1, 2]
 The array one, two, two responds with a new array one, two when uniq is sent.
 The original array in variable a is not changed.
 
-Using the destructive method will not create a new array but change the
+Using the destructive method below will not create a new array but change the
 existing one.
 It changes some internals and this might not be expected, therefor it notifies
 the reader with the exclamation mark.
@@ -280,7 +276,7 @@ As time handling was such pain to me using other tools
 
 The snippet uses some database abstraction and queries alls users that were
 created in the last three days...
-...or in the other way: users where created at is greater than equal 3 days ago
+...or in the other words: users where created at is greater than equal 3 days ago
 
 For this presentation I decided to build a package that offers this time
 handling from scratch. For sure in a very simplified version, but we should end
@@ -296,7 +292,7 @@ up being able to recreate this statement.
 ![](./media/felix-hoffmann-QeYLUolK1XY-unsplash.jpg)
 
 <!--
-The code written was build for demonstration purpose.
+The code written was build for demonstrational purpose.
 
 If you want to start with Ruby, it might be a bad idea that the first thing you
 do is manipulating its very basic objects.
@@ -318,9 +314,11 @@ me point you to some proper resources.
 ![](./media/github-repo.png)
 
 <!--
-All codes - even more than shown - is published at GitHub. Currently there
-are only 10 repositories showing up when you search for ruby ef te double-u
-on GitHub, I am sure you will find it quickly.
+Slides and all code - even more than shown - is published at GitHub.
+
+Currently there are only 10 repositories showing up when you search for ruby
+ftw on GitHub.
+I am sure you will find it quickly.
 -->
 
 # Try Ruby\footnote{https://try.ruby-lang.org/}
@@ -328,8 +326,8 @@ on GitHub, I am sure you will find it quickly.
 ![](./media/try-ruby.png)
 
 <!--
-The first one is try ruby on the official site of the language that gives you
-a guided tour and a nice playground in your web browser.
+Visit try ruby on the official site of the language to get a guided tour and a
+nice playground in your web browser.
 -->
 
 # Join Exercism\footnote{https://exercism.io/tracks/ruby}
@@ -337,8 +335,9 @@ a guided tour and a nice playground in your web browser.
 ![](./media/exercism.png)
 
 <!--
-Second, have a look at Exercism, which is a open source platform that supports
-you when learning a programming language.
+Then have a look at Exercism, which is a open source platform that supports you
+when learning a programming language.
+
 It currently has around 50 language tracks, where you solve tasks and get
 feedback of real people.
 Note that those people are volunteers, so don't be mad if it takes some time to
@@ -369,8 +368,11 @@ it also offers great ways to build web applications.
 <!--
 When you've spent some time with Ruby, it is time to meet its widely used
 static code analyzer RuboCop.
+
 This tool will help you to use and understand best practices from the Ruby
 community.
+Besides it is a great project and bundles so much knowledge.
+
 For me it took quite some time to stop hating this tool and get the value
 behind, so don't give up easily.
 -->
